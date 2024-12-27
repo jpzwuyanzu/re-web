@@ -1,0 +1,50 @@
+/* 分页 */
+/* styles.css */
+
+.pagination-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    padding: 10px 4px;
+}
+
+.pagination-item {
+    background: #262626;
+    color: white;
+    max-width: 60px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 7px 9px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.pagination-item.active {
+    background-color: #f10086;
+    color: white;
+}
+
+.pagination-item:disabled {
+    background: #444;
+    cursor: not-allowed;
+}
+
+.pagination-ellipsis {
+    background: none;
+    color: white;
+    border: none;
+    font-size: 14px;
+    cursor: default;
+}

@@ -14,11 +14,7 @@
   <link rel="stylesheet" href="./css/home.css">
   <link rel="stylesheet" href="./css/h5.css">
   <link rel="stylesheet" href="./css/pc.css">
-  <style>
-
-
- 
-  </style>
+  <link rel="stylesheet" href="./css/pagination.css">
 </head>
 
 <body>
@@ -47,7 +43,7 @@
               </div>
             </div>
           </div>
-          
+
           <div class="dropdown cus-pc-changeLanguage">
             <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
               aria-expanded="false">
@@ -244,7 +240,7 @@
         </div>
         <div class="col-md-3 col-6 cusListArea">
           <div class="card service-card">
-             <a href="javascript:void(0);" class="videoItem">
+            <a href="javascript:void(0);" class="videoItem">
               <img src="./images/h5/videoPre.png" class="card-img-top" alt="Service 1">
               <div class="videoInfo">
                 <span>200次播放</span>
@@ -259,7 +255,7 @@
         </div>
         <div class="col-md-3 col-6 cusListArea">
           <div class="card service-card">
-             <a href="javascript:void(0);" class="videoItem">
+            <a href="javascript:void(0);" class="videoItem">
               <img src="./images/h5/videoPre.png" class="card-img-top" alt="Service 1">
               <div class="videoInfo">
                 <span>200次播放</span>
@@ -274,7 +270,7 @@
         </div>
         <div class="col-md-3 col-6 cusListArea">
           <div class="card service-card">
-             <a href="javascript:void(0);" class="videoItem">
+            <a href="javascript:void(0);" class="videoItem">
               <img src="./images/h5/videoPre.png" class="card-img-top" alt="Service 1">
               <div class="videoInfo">
                 <span>200次播放</span>
@@ -289,7 +285,7 @@
         </div>
         <div class="col-md-3 col-6 cusListArea">
           <div class="card service-card">
-             <a href="javascript:void(0);" class="videoItem">
+            <a href="javascript:void(0);" class="videoItem">
               <img src="./images/h5/videoPre.png" class="card-img-top" alt="Service 1">
               <div class="videoInfo">
                 <span>200次播放</span>
@@ -304,7 +300,7 @@
         </div>
         <div class="col-md-3 col-6 cusListArea">
           <div class="card service-card">
-             <a href="javascript:void(0);" class="videoItem">
+            <a href="javascript:void(0);" class="videoItem">
               <img src="./images/h5/videoPre.png" class="card-img-top" alt="Service 1">
               <div class="videoInfo">
                 <span>200次播放</span>
@@ -319,7 +315,7 @@
         </div>
         <div class="col-md-3 col-6 cusListArea">
           <div class="card service-card">
-             <a href="javascript:void(0);" class="videoItem">
+            <a href="javascript:void(0);" class="videoItem">
               <img src="./images/h5/videoPre.png" class="card-img-top" alt="Service 1">
               <div class="videoInfo">
                 <span>200次播放</span>
@@ -334,7 +330,7 @@
         </div>
         <div class="col-md-3 col-6 cusListArea">
           <div class="card service-card">
-             <a href="javascript:void(0);" class="videoItem">
+            <a href="javascript:void(0);" class="videoItem">
               <img src="./images/h5/videoPre.png" class="card-img-top" alt="Service 1">
               <div class="videoInfo">
                 <span>200次播放</span>
@@ -349,7 +345,7 @@
         </div>
         <div class="col-md-3 col-6 cusListArea">
           <div class="card service-card">
-             <a href="javascript:void(0);" class="videoItem">
+            <a href="javascript:void(0);" class="videoItem">
               <img src="./images/h5/videoPre.png" class="card-img-top" alt="Service 1">
               <div class="videoInfo">
                 <span>200次播放</span>
@@ -364,7 +360,7 @@
         </div>
         <div class="col-md-3 col-6 cusListArea">
           <div class="card service-card">
-             <a href="javascript:void(0);" class="videoItem">
+            <a href="javascript:void(0);" class="videoItem">
               <img src="./images/h5/videoPre.png" class="card-img-top" alt="Service 1">
               <div class="videoInfo">
                 <span>200次播放</span>
@@ -379,7 +375,7 @@
         </div>
         <div class="col-md-3 col-6 cusListArea">
           <div class="card service-card">
-             <a href="javascript:void(0);" class="videoItem">
+            <a href="javascript:void(0);" class="videoItem">
               <img src="./images/h5/videoPre.png" class="card-img-top" alt="Service 1">
               <div class="videoInfo">
                 <span>200次播放</span>
@@ -393,21 +389,12 @@
           </div>
         </div>
       </div>
-
-      <!-- Pagination for services -->
-      <nav aria-label="Page navigation cusNavigation">
-        <ul class="pagination justify-content-center mt-4">
-          <li class="page-item">
-            <a class="page-link" href="#" tabindex="-1">Prev</a>
-          </li>
-          <li class="page-item"><a class="page-link" href="#">1</a></li>
-          <li class="page-item"><a class="page-link" href="#">2</a></li>
-          <li class="page-item"><a class="page-link" href="#">3</a></li>
-          <li class="page-item">
-            <a class="page-link" href="#">Next</a>
-          </li>
-        </ul>
-      </nav>
+      <!-- 分页 -->
+      <div class="pagination-container">
+        <div class="pagination" id="pagination">
+          <!-- 分页内容将通过 JS 动态生成 -->
+        </div>
+      </div>
     </section>
 
     <!-- Footer -->
@@ -418,91 +405,97 @@
   <!-- Bootstrap JS and Popper.js (for dropdowns, tooltips, etc.) -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    // Language data
-    const translations = {
-      en: {
-        heroTitle: "Welcome to MySite",
-        heroDesc: "We provide the best services for your business needs.",
-        learnMore: "Learn More",
-        servicesTitle: "Our Services",
-        service1Title: "Web Design",
-        service1Desc: "We create beautiful and functional websites that deliver results.",
-        service2Title: "SEO Services",
-        service2Desc: "We optimize your site for better search engine ranking and visibility.",
-        service3Title: "Digital Marketing",
-        service3Desc: "We help you reach your audience through targeted digital marketing strategies.",
-        service4Title: "Branding",
-        service4Desc: "We help build your brand identity and create lasting impressions.",
-        home: "Home",
-        about: "About",
-        services: "Services",
-        contact: "Contact"
-      },
-      zh: {
-        heroTitle: "欢迎来到MySite",
-        heroDesc: "我们为您的业务需求提供最佳服务。",
-        learnMore: "了解更多",
-        servicesTitle: "我们的服务",
-        service1Title: "网页设计",
-        service1Desc: "我们创建美观且功能强大的网站，以提供效果。",
-        service2Title: "SEO服务",
-        service2Desc: "我们优化您的网站，以提高搜索引擎排名和可见性。",
-        service3Title: "数字营销",
-        service3Desc: "我们通过定向数字营销策略帮助您接触受众。",
-        service4Title: "品牌建设",
-        service4Desc: "我们帮助建立您的品牌身份并创造持久的印象。",
-        home: "首页",
-        about: "关于我们",
-        services: "服务",
-        contact: "联系方式"
-      }
-    };
-
-    // Function to switch language
-    function switchLanguage(language) {
-      const textElements = document.querySelectorAll('[data-key]');
-      textElements.forEach(el => {
-        const key = el.getAttribute('data-key');
-        if (translations[language][key]) {
-          el.innerText = translations[language][key];
+  <script type="module">
+    import { paginationConfig } from './js/paginationConfig.js'
+    import { renderPagination } from './js/pagination.js'
+    document.addEventListener("DOMContentLoaded", function () {
+      renderPagination(paginationConfig)
+      // Language data
+      const translations = {
+        en: {
+          heroTitle: "Welcome to MySite",
+          heroDesc: "We provide the best services for your business needs.",
+          learnMore: "Learn More",
+          servicesTitle: "Our Services",
+          service1Title: "Web Design",
+          service1Desc: "We create beautiful and functional websites that deliver results.",
+          service2Title: "SEO Services",
+          service2Desc: "We optimize your site for better search engine ranking and visibility.",
+          service3Title: "Digital Marketing",
+          service3Desc: "We help you reach your audience through targeted digital marketing strategies.",
+          service4Title: "Branding",
+          service4Desc: "We help build your brand identity and create lasting impressions.",
+          home: "Home",
+          about: "About",
+          services: "Services",
+          contact: "Contact"
+        },
+        zh: {
+          heroTitle: "欢迎来到MySite",
+          heroDesc: "我们为您的业务需求提供最佳服务。",
+          learnMore: "了解更多",
+          servicesTitle: "我们的服务",
+          service1Title: "网页设计",
+          service1Desc: "我们创建美观且功能强大的网站，以提供效果。",
+          service2Title: "SEO服务",
+          service2Desc: "我们优化您的网站，以提高搜索引擎排名和可见性。",
+          service3Title: "数字营销",
+          service3Desc: "我们通过定向数字营销策略帮助您接触受众。",
+          service4Title: "品牌建设",
+          service4Desc: "我们帮助建立您的品牌身份并创造持久的印象。",
+          home: "首页",
+          about: "关于我们",
+          services: "服务",
+          contact: "联系方式"
         }
+      };
+
+      // Function to switch language
+      function switchLanguage(language) {
+        const textElements = document.querySelectorAll('[data-key]');
+        textElements.forEach(el => {
+          const key = el.getAttribute('data-key');
+          if (translations[language][key]) {
+            el.innerText = translations[language][key];
+          }
+        });
+
+        document.getElementById("hero-title").innerText = translations[language].heroTitle;
+        document.getElementById("hero-desc").innerText = translations[language].heroDesc;
+        document.getElementById("learn-more").innerText = translations[language].learnMore;
+        document.getElementById("services-title").innerText = translations[language].servicesTitle;
+        document.getElementById("service1-title").innerText = translations[language].service1Title;
+        document.getElementById("service1-desc").innerText = translations[language].service1Desc;
+        document.getElementById("service2-title").innerText = translations[language].service2Title;
+        document.getElementById("service2-desc").innerText = translations[language].service2Desc;
+        document.getElementById("service3-title").innerText = translations[language].service3Title;
+        document.getElementById("service3-desc").innerText = translations[language].service3Desc;
+        document.getElementById("service4-title").innerText = translations[language].service4Title;
+        document.getElementById("service4-desc").innerText = translations[language].service4Desc;
+      }
+
+      // Event listener for language selector
+      document.getElementById("language-selector").addEventListener("change", (event) => {
+        switchLanguage(event.target.value);
       });
 
-      document.getElementById("hero-title").innerText = translations[language].heroTitle;
-      document.getElementById("hero-desc").innerText = translations[language].heroDesc;
-      document.getElementById("learn-more").innerText = translations[language].learnMore;
-      document.getElementById("services-title").innerText = translations[language].servicesTitle;
-      document.getElementById("service1-title").innerText = translations[language].service1Title;
-      document.getElementById("service1-desc").innerText = translations[language].service1Desc;
-      document.getElementById("service2-title").innerText = translations[language].service2Title;
-      document.getElementById("service2-desc").innerText = translations[language].service2Desc;
-      document.getElementById("service3-title").innerText = translations[language].service3Title;
-      document.getElementById("service3-desc").innerText = translations[language].service3Desc;
-      document.getElementById("service4-title").innerText = translations[language].service4Title;
-      document.getElementById("service4-desc").innerText = translations[language].service4Desc;
-    }
-
-    // Event listener for language selector
-    document.getElementById("language-selector").addEventListener("change", (event) => {
-      switchLanguage(event.target.value);
-    });
-
-    // Toggle dropdown and submenu for mobile
-    document.querySelectorAll('.nav-item.dropdown').forEach(item => {
-      item.addEventListener('click', (event) => {
-        event.stopPropagation();
-        item.classList.toggle('open');
+      // Toggle dropdown and submenu for mobile
+      document.querySelectorAll('.nav-item.dropdown').forEach(item => {
+        item.addEventListener('click', (event) => {
+          event.stopPropagation();
+          item.classList.toggle('open');
+        });
       });
-    });
 
-    // Close the offcanvas menu when a category or subcategory is selected
-    document.querySelectorAll('.dropdown-item').forEach(item => {
-      item.addEventListener('click', () => {
-        const offcanvas = bootstrap.Offcanvas.getInstance(document.getElementById('offcanvasNavbar'));
-        offcanvas.hide();
+      // Close the offcanvas menu when a category or subcategory is selected
+      document.querySelectorAll('.dropdown-item').forEach(item => {
+        item.addEventListener('click', () => {
+          const offcanvas = bootstrap.Offcanvas.getInstance(document.getElementById('offcanvasNavbar'));
+          offcanvas.hide();
+        });
       });
-    });
+    })
+
 
   </script>
 </body>
