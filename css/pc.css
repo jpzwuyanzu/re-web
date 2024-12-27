@@ -1,11 +1,13 @@
    /* 大屏设备 logo */
-   @media (min-width: 768px) {
+   @media (min-width: 990px) {
        .col-md-3 {
            width: 24%;
        }
 
        #services-list {
-           gap: 14px;
+           gap: 12px;
+           justify-content: flex-start;
+           padding-left: 15px;
        }
 
        .cus-search-box {
@@ -36,7 +38,8 @@
        .cus-searchPart {
            width: 478px;
            height: 30px;
-           margin: 12px 14px 12px 508.1px;
+           /* margin: 12px 14px 12px 508.1px; */
+           margin-right: 14px;
            border-radius: 15px;
            background-color: #2b2633;
            display: flex;
