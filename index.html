@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Responsive Site with Multi-language and Slide-in Navbar</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/home.css">
+  <link rel="stylesheet" href="./css/h5.css">
+  <link rel="stylesheet" href="./css/pc.css">
+  <style>
+
+
+ 
+  </style>
+</head>
+
+<body>
+  <div>
+
+    <!-- Navbar with language switch -->
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- pc header部分 -->
+          <div class=" collapse navbar-collapse">
+            <a class="navbar-brand" href="#"></a>
+          </div>
+          <div class="collapse navbar-collapse" id="top-navbar-1">
+            <div class="nav navbar-nav navbar-right">
+              <div class="cus-searchPart">
+                <input type="text">
+                <button>
+                  <img src="./images/h5/search.png" alt="">
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="dropdown cus-pc-changeLanguage">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              翻译
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">中文</a></li>
+              <li><a class="dropdown-item" href="#">英文</a></li>
+              <li><a class="dropdown-item" href="#">日文</a></li>
+            </ul>
+          </div>
+          <!-- pc header部分 -->
+          <!-- Brand in center for mobile -->
+          <div class="cus-search-box"></div>
+          <a class="navbar-brand d-block d-lg-none" href="#"></a>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Offcanvas Sidebar (for mobile) -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav flex-grow-1" id="menu-list">
+          <li class="nav-item">
+            <a class="nav-link" href="#" data-key="home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" data-key="about">About</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false" data-key="services">
+              Services
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button"
+                  data-bs-toggle="dropdown" aria-expanded="false">Web Development</a>
+                <ul class="submenu dropdown-menu" aria-labelledby="navbarDropdown2">
+                  <li><a class="dropdown-item" href="#">Frontend Development</a></li>
+                  <li><a class="dropdown-item" href="#">Backend Development</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button"
+                  data-bs-toggle="dropdown" aria-expanded="false">Marketing</a>
+                <ul class="submenu dropdown-menu" aria-labelledby="navbarDropdown3">
+                  <li><a class="dropdown-item" href="#">SEO</a></li>
+                  <li><a class="dropdown-item" href="#">Social Media</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" data-key="contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Hero Section pc-->
+    <section class="hero-section" id="hero-section">
+      <div class="container pc-type-container">
+        <!-- pc的分类区域 -->
+        <div class="cus-pc-typeList">
+          <ul class="typeList-container">
+            <li class="cus-type ">
+              <button class="btn btn-dark cus-type-btn">
+                首页
+              </button>
+            </li>
+            <li class="cus-type dropdown">
+              <button class="btn btn-dark dropdown-toggle cus-type-btn" data-bs-toggle="dropdown" aria-expanded="false">
+                一级分类
+              </button>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="#">中文</a></li>
+                <li><a class="dropdown-item" href="#">萝莉</a></li>
+                <li><a class="dropdown-item" href="#">高潮</a></li>
+              </ul>
+            </li>
+            <li class="cus-type dropdown">
+              <button class="btn btn-dark dropdown-toggle cus-type-btn" data-bs-toggle="dropdown" aria-expanded="false">
+                一级分类
+              </button>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="#">中文</a></li>
+                <li><a class="dropdown-item" href="#">萝莉</a></li>
+                <li><a class="dropdown-item" href="#">高潮</a></li>
+              </ul>
+            </li>
+            <li class="cus-type dropdown">
+              <button class="btn btn-dark dropdown-toggle cus-type-btn" data-bs-toggle="dropdown" aria-expanded="false">
+                一级分类
+              </button>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="#">中文</a></li>
+                <li><a class="dropdown-item" href="#">萝莉</a></li>
+                <li><a class="dropdown-item" href="#">高潮</a></li>
+              </ul>
+            </li>
+            <li class="cus-type dropdown">
+              <button class="btn btn-dark dropdown-toggle cus-type-btn" data-bs-toggle="dropdown" aria-expanded="false">
+                一级分类
+              </button>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="#">中文</a></li>
+                <li><a class="dropdown-item" href="#">萝莉</a></li>
+                <li><a class="dropdown-item" href="#">高潮</a></li>
+              </ul>
+            </li>
+            <li class="cus-type dropdown">
+              <button class="btn btn-dark dropdown-toggle cus-type-btn" data-bs-toggle="dropdown" aria-expanded="false">
+                一级分类
+              </button>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="#">中文</a></li>
+                <li><a class="dropdown-item" href="#">萝莉</a></li>
+                <li><a class="dropdown-item" href="#">高潮</a></li>
+              </ul>
+            </li>
+            <li class="cus-type dropdown">
+              <button class="btn btn-dark dropdown-toggle cus-type-btn" data-bs-toggle="dropdown" aria-expanded="false">
+                一级分类
+              </button>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="#">中文</a></li>
+                <li><a class="dropdown-item" href="#">萝莉</a></li>
+                <li><a class="dropdown-item" href="#">高潮</a></li>
+              </ul>
+            </li>
+            <li class="cus-type dropdown">
+              <button class="btn btn-dark dropdown-toggle cus-type-btn" data-bs-toggle="dropdown" aria-expanded="false">
+                一级分类
+              </button>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="#">中文</a></li>
+                <li><a class="dropdown-item" href="#">萝莉</a></li>
+                <li><a class="dropdown-item" href="#">高潮</a></li>
+              </ul>
+            </li>
+            <li class="cus-type dropdown">
+              <button class="btn btn-dark dropdown-toggle cus-type-btn" data-bs-toggle="dropdown" aria-expanded="false">
+                一级分类
+              </button>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="#">中文</a></li>
+                <li><a class="dropdown-item" href="#">萝莉</a></li>
+                <li><a class="dropdown-item" href="#">高潮</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="container my-5">
+      <h2 class="text-left mb-4" id="services-title">搜索 "妹子" (4520)</h2>
+      <div class="row" id="services-list">
+        <div class="col-md-3 col-6 cusListArea">
+          <div class="card service-card">
+            <a href="javascript:void(0);" class="videoItem">
+              <img src="./images/h5/videoPre.png" class="card-img-top" alt="Service 1">
+              <div class="videoInfo">
+                <span>200次播放</span>
+                <span>2:52:39</span>
+              </div>
+            </a>
+            <div class="card-body">
+              <h5 class="card-title" id="service1-title">SORA-544 ガチ恋粘着ピーピン…</h5>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-6 cusListArea">
+          <div class="card service-card">
+            <a href="javascript:void(0);" class="videoItem">
+              <img src="./images/h5/videoPre.png" class="card-img-top" alt="Service 1">
+              <div class="videoInfo">
+                <span>200次播放</span>
+                <span>2:52:39</span>
+              </div>
+            </a>
+            <div class="card-body">
+              <h5 class="card-title" id="service1-title">SORA-544 ガチ恋粘着ピーピン…</h5>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-6 cusListArea">
+          <div class="card service-card">
+             <a href="javascript:void(0);" class="videoItem">
+              <img src="./images/h5/videoPre.png" class="card-img-top" alt="Service 1">
+              <div class="videoInfo">
+                <span>200次播放</span>
+                <span>2:52:39</span>
+              </div>
+            </a>
+            <div class="card-body">
+              <h5 class="card-title" id="service1-title">SORA-544 ガチ恋粘着ピーピン…</h5>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-6 cusListArea">
+          <div class="card service-card">
+             <a href="javascript:void(0);" class="videoItem">
+              <img src="./images/h5/videoPre.png" class="card-img-top" alt="Service 1">
+              <div class="videoInfo">
+                <span>200次播放</span>
+                <span>2:52:39</span>
+              </div>
+            </a>
+            <div class="card-body">
+              <h5 class="card-title" id="service1-title">SORA-544 ガチ恋粘着ピーピン…</h5>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-6 cusListArea">
+          <div class="card service-card">
+             <a href="javascript:void(0);" class="videoItem">
+              <img src="./images/h5/videoPre.png" class="card-img-top" alt="Service 1">
+              <div class="videoInfo">
+                <span>200次播放</span>
+                <span>2:52:39</span>
+              </div>
+            </a>
+            <div class="card-body">
+              <h5 class="card-title" id="service1-title">SORA-544 ガチ恋粘着ピーピン…</h5>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-6 cusListArea">
+          <div class="card service-card">
+             <a href="javascript:void(0);" class="videoItem">
+              <img src="./images/h5/videoPre.png" class="card-img-top" alt="Service 1">
+              <div class="videoInfo">
+                <span>200次播放</span>
+                <span>2:52:39</span>
+              </div>
+            </a>
+            <div class="card-body">
+              <h5 class="card-title" id="service1-title">SORA-544 ガチ恋粘着ピーピン…</h5>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-6 cusListArea">
+          <div class="card service-card">
+             <a href="javascript:void(0);" class="videoItem">
+              <img src="./images/h5/videoPre.png" class="card-img-top" alt="Service 1">
+              <div class="videoInfo">
+                <span>200次播放</span>
+                <span>2:52:39</span>
+              </div>
+            </a>
+            <div class="card-body">
+              <h5 class="card-title" id="service1-title">SORA-544 ガチ恋粘着ピーピン…</h5>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-6 cusListArea">
+          <div class="card service-card">
+             <a href="javascript:void(0);" class="videoItem">
+              <img src="./images/h5/videoPre.png" class="card-img-top" alt="Service 1">
+              <div class="videoInfo">
+                <span>200次播放</span>
+                <span>2:52:39</span>
+              </div>
+            </a>
+            <div class="card-body">
+              <h5 class="card-title" id="service1-title">SORA-544 ガチ恋粘着ピーピン…</h5>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-6 cusListArea">
+          <div class="card service-card">
+             <a href="javascript:void(0);" class="videoItem">
+              <img src="./images/h5/videoPre.png" class="card-img-top" alt="Service 1">
+              <div class="videoInfo">
+                <span>200次播放</span>
+                <span>2:52:39</span>
+              </div>
+            </a>
+            <div class="card-body">
+              <h5 class="card-title" id="service1-title">SORA-544 ガチ恋粘着ピーピン…</h5>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-6 cusListArea">
+          <div class="card service-card">
+             <a href="javascript:void(0);" class="videoItem">
+              <img src="./images/h5/videoPre.png" class="card-img-top" alt="Service 1">
+              <div class="videoInfo">
+                <span>200次播放</span>
+                <span>2:52:39</span>
+              </div>
+            </a>
+            <div class="card-body">
+              <h5 class="card-title" id="service1-title">SORA-544 ガチ恋粘着ピーピン…</h5>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-6 cusListArea">
+          <div class="card service-card">
+             <a href="javascript:void(0);" class="videoItem">
+              <img src="./images/h5/videoPre.png" class="card-img-top" alt="Service 1">
+              <div class="videoInfo">
+                <span>200次播放</span>
+                <span>2:52:39</span>
+              </div>
+            </a>
+            <div class="card-body">
+              <h5 class="card-title" id="service1-title">SORA-544 ガチ恋粘着ピーピン…</h5>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-6 cusListArea">
+          <div class="card service-card">
+             <a href="javascript:void(0);" class="videoItem">
+              <img src="./images/h5/videoPre.png" class="card-img-top" alt="Service 1">
+              <div class="videoInfo">
+                <span>200次播放</span>
+                <span>2:52:39</span>
+              </div>
+            </a>
+            <div class="card-body">
+              <h5 class="card-title" id="service1-title">SORA-544 ガチ恋粘着ピーピン…</h5>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pagination for services -->
+      <nav aria-label="Page navigation cusNavigation">
+        <ul class="pagination justify-content-center mt-4">
+          <li class="page-item">
+            <a class="page-link" href="#" tabindex="-1">Prev</a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#">Next</a>
+          </li>
+        </ul>
+      </nav>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+    </footer>
+  </div>
+
+  <!-- Bootstrap JS and Popper.js (for dropdowns, tooltips, etc.) -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Language data
+    const translations = {
+      en: {
+        heroTitle: "Welcome to MySite",
+        heroDesc: "We provide the best services for your business needs.",
+        learnMore: "Learn More",
+        servicesTitle: "Our Services",
+        service1Title: "Web Design",
+        service1Desc: "We create beautiful and functional websites that deliver results.",
+        service2Title: "SEO Services",
+        service2Desc: "We optimize your site for better search engine ranking and visibility.",
+        service3Title: "Digital Marketing",
+        service3Desc: "We help you reach your audience through targeted digital marketing strategies.",
+        service4Title: "Branding",
+        service4Desc: "We help build your brand identity and create lasting impressions.",
+        home: "Home",
+        about: "About",
+        services: "Services",
+        contact: "Contact"
+      },
+      zh: {
+        heroTitle: "欢迎来到MySite",
+        heroDesc: "我们为您的业务需求提供最佳服务。",
+        learnMore: "了解更多",
+        servicesTitle: "我们的服务",
+        service1Title: "网页设计",
+        service1Desc: "我们创建美观且功能强大的网站，以提供效果。",
+        service2Title: "SEO服务",
+        service2Desc: "我们优化您的网站，以提高搜索引擎排名和可见性。",
+        service3Title: "数字营销",
+        service3Desc: "我们通过定向数字营销策略帮助您接触受众。",
+        service4Title: "品牌建设",
+        service4Desc: "我们帮助建立您的品牌身份并创造持久的印象。",
+        home: "首页",
+        about: "关于我们",
+        services: "服务",
+        contact: "联系方式"
+      }
+    };
+
+    // Function to switch language
+    function switchLanguage(language) {
+      const textElements = document.querySelectorAll('[data-key]');
+      textElements.forEach(el => {
+        const key = el.getAttribute('data-key');
+        if (translations[language][key]) {
+          el.innerText = translations[language][key];
+        }
+      });
+
+      document.getElementById("hero-title").innerText = translations[language].heroTitle;
+      document.getElementById("hero-desc").innerText = translations[language].heroDesc;
+      document.getElementById("learn-more").innerText = translations[language].learnMore;
+      document.getElementById("services-title").innerText = translations[language].servicesTitle;
+      document.getElementById("service1-title").innerText = translations[language].service1Title;
+      document.getElementById("service1-desc").innerText = translations[language].service1Desc;
+      document.getElementById("service2-title").innerText = translations[language].service2Title;
+      document.getElementById("service2-desc").innerText = translations[language].service2Desc;
+      document.getElementById("service3-title").innerText = translations[language].service3Title;
+      document.getElementById("service3-desc").innerText = translations[language].service3Desc;
+      document.getElementById("service4-title").innerText = translations[language].service4Title;
+      document.getElementById("service4-desc").innerText = translations[language].service4Desc;
+    }
+
+    // Event listener for language selector
+    document.getElementById("language-selector").addEventListener("change", (event) => {
+      switchLanguage(event.target.value);
+    });
+
+    // Toggle dropdown and submenu for mobile
+    document.querySelectorAll('.nav-item.dropdown').forEach(item => {
+      item.addEventListener('click', (event) => {
+        event.stopPropagation();
+        item.classList.toggle('open');
+      });
+    });
+
+    // Close the offcanvas menu when a category or subcategory is selected
+    document.querySelectorAll('.dropdown-item').forEach(item => {
+      item.addEventListener('click', () => {
+        const offcanvas = bootstrap.Offcanvas.getInstance(document.getElementById('offcanvasNavbar'));
+        offcanvas.hide();
+      });
+    });
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+.navbar {
+    height: 39px;
+}
+
+.navbar-toggler {
+    border: none;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+}
+
+.navbar-toggler-icon {
+    width: 20px;
+    height: 20px;
+    background: url("../images/h5/left.png") no-repeat center;
+    background-size: cover;
+}
+
+.navbar-brand {
+    background: url("../images/h5/logo.png") no-repeat center;
+    background-size: cover;
+    width: 32px;
+    height: 34px;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+.cus-search-box {
+    width: 20px;
+    height: 20px;
+    background: url("../images/h5/search.png") no-repeat center;
+    background-size: cover;
+}
+
+/* Make sure the navbar brand is centered */
+@media (max-width: 992px) {
+    .navbar-brand {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+
+/* 手机端 logo */
+@media (max-width: 768px) {
+    .col-6 {
+        width: 46%;
+    }
+
+    #services-list {
+        gap: 8px;
+        justify-content: center;
+    }
+
+    .cus-pc-changeLanguage {
+        display: none;
+    }
+
+    .hero-section {
+        display: none;
+    }
+
+    .logo-img {
+        max-height: 40px;
+        /* 调整 logo 高度 */
+    }
+
+}
