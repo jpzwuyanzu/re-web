@@ -1,5 +1,9 @@
    /* 大屏设备 logo */
    @media (min-width: 990px) {
+       .m-search-container {
+           display: none;
+       }
+
        .col-md-3 {
            width: 24%;
        }

@@ -63,6 +63,11 @@
     #services-list {
         gap: 8px;
         justify-content: flex-start;
+        margin-top: 24px;
+    }
+
+    .services-list-margin {
+        margin-top: -30px !important;
     }
 
     .cus-pc-changeLanguage {
@@ -73,9 +78,73 @@
         display: none;
     }
 
+    #services-title {
+        display: none;
+    }
+
     .logo-img {
-        max-height: 40px;
+        max-height: 39px;
         /* 调整 logo 高度 */
+    }
+
+    .m-search-container {
+        padding-top: 40px;
+        display: none;
+    }
+
+
+    .m-search-container .search-box {
+        padding: 10px 15px;
+        /* height: 40px; */
+        background-color: #1d1924;
+        border-top: 1px solid #29252f;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .m-search-container .search-box .search-container {
+        flex: 1;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .search-input {
+        width: calc(100% - 60px);
+        height: 40px;
+        border-radius: 50px 0 0 50px;
+        background-color: #2b2536;
+        color: #9186a7;
+        padding: 0 15px;
+        border: 0;
+        font-size: 14px;
+    }
+
+    .button {
+        display: inline-block;
+        width: 64px;
+        height: 40px;
+        background-color: #f10086;
+        border-radius: 0 50px 50px 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .button a {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    .button a img {
+        width: 30px;
+        height: 30px;
     }
 
 }

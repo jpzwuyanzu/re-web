@@ -31,19 +31,19 @@
 
           <!-- pc header部分 -->
           <div class="collapse navbar-collapse" id="top-navbar-1">
-             <a class="navbar-brand" href="#"></a>
+            <a class="navbar-brand" href="#"></a>
           </div>
 
           <div class="nav navbar-nav navbar-right cus-searchPart-container">
-              <div class="cus-searchPart">
-                <input type="text">
-                <button>
-                  <a href="javascript:void(0);">
-                    <img src="./images/h5/search.png" alt="">
-                  </a>
-                </button>
-              </div>
+            <div class="cus-searchPart">
+              <input type="text">
+              <button>
+                <a href="javascript:void(0);">
+                  <img src="./images/h5/search.png" alt="">
+                </a>
+              </button>
             </div>
+          </div>
 
           <div class="dropdown cus-pc-changeLanguage">
             <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
@@ -58,9 +58,9 @@
           </div>
           <!-- pc header部分 -->
           <!-- Brand in center for mobile -->
-        
+
           <a class="navbar-brand d-block d-lg-none" href="#"></a>
-            <div class="cus-search-box"></div>
+          <div id="h5-search-icon" class="cus-search-box"></div>
         </div>
       </nav>
     </div>
@@ -202,6 +202,21 @@
               </ul>
             </li>
           </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- m端搜素区域 -->
+    <section id="searchBox" class="m-search-container">
+      <!-- 搜索框 -->
+      <div class="search-box">
+        <div class="search-container">
+          <input type="text" class="search-input" placeholder="请输入搜索关键字" id="searchInput" />
+          <div class="button" id="searchButton">
+            <a href="javascript:void(0);">
+              <img src="./images/h5/big-search.png" alt="Search" />
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -410,8 +425,14 @@
   <script type="module">
     import { paginationConfig } from './js/paginationConfig.js'
     import { renderPagination } from './js/pagination.js'
-    document.addEventListener("DOMContentLoaded", function () {
+    $(document).ready(() => {
       renderPagination(paginationConfig)
+
+      // 获取需要操作的元素
+      const searchIcon = document.getElementById('h5-search-icon');
+      const searchDiv = document.getElementById('searchBox');
+      const serviceList = document.getElementById('services-list');
+      console.log(searchIcon, searchDiv)
       // Language data
       const translations = {
         en: {
@@ -476,6 +497,17 @@
         document.getElementById("service4-desc").innerText = translations[language].service4Desc;
       }
 
+      // 绑定点击事件
+      searchIcon.addEventListener('click', function () {
+        // 切换 #another-div 的显示和隐藏
+        if (searchDiv.style.display === 'none' || searchDiv.style.display === '') {
+          searchDiv.style.display = 'block';  // 显示元素
+          serviceList.classList.add("services-list-margin")
+        } else {
+          searchDiv.style.display = 'none';  // 隐藏元素
+          serviceList.classList.remove("services-list-margin")
+        }
+      });
       // Event listener for language selector
       document.getElementById("language-selector").addEventListener("change", (event) => {
         switchLanguage(event.target.value);
@@ -496,7 +528,7 @@
           offcanvas.hide();
         });
       });
-    })
+    });
 
 
   </script>
