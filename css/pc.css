@@ -71,7 +71,16 @@
            color: #fff;
        }
 
-       .cus-searchPart button img {
+       .cus-searchPart button a {
+           display: flex;
+           flex-direction: row;
+           align-items: center;
+           justify-content: center;
+           width: 100%;
+           height: 100%;
+       }
+
+       .cus-searchPart button a img {
            width: 20px;
            height: 20px;
            object-fit: contain;
