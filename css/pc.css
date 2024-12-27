@@ -132,15 +132,15 @@
        .pagination-item {
            background: #262626;
            color: white;
-           max-width: 60px;
+           max-width: 80px !important;
            white-space: nowrap;
            overflow: hidden;
            text-overflow: ellipsis;
-           padding: 7px 9px;
+           padding: 9px 18px !important;
            border: none;
            border-radius: 2px;
            cursor: pointer;
-           font-size: 12px;
+           font-size: 14px !important;
        }
 
        .pagination-item.active {
