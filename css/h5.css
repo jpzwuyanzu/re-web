@@ -56,12 +56,13 @@
     }
 
     .col-6 {
-        width: 46%;
+        width: 48%;
+        padding-left: 10px;
     }
 
     #services-list {
         gap: 8px;
-        justify-content: center;
+        justify-content: flex-start;
     }
 
     .cus-pc-changeLanguage {
